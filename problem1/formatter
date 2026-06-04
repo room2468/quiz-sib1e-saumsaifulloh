@@ -19,4 +19,10 @@ read -r first_name last_name
 #   Use: echo "$last_upper, $first_title"
 
 # TODO: Replace this line with your implementation
-echo "TODO"
+
+last_upper=${last_name^^}
+
+first_lower=${first_name,,}
+first_title=${first_lower^}
+
+echo "$last_upper, $first_title"

@@ -36,8 +36,22 @@ while IFS= read -r filename; do
     #             ;;
     #     esac
 
+
     # TODO: Replace this line with your case statement
-    echo "TODO"
+    case "$filename" in
+        *.sh)
+            (( scripts++ ))
+            ;;
+        *.log)
+            (( logs++ ))
+            ;;
+        *.conf)
+            (( configs++ ))
+            ;;
+        *)
+            (( others++ ))
+            ;;
+    esac
 done
 
 echo "Scripts (.sh): $scripts"
